@@ -105,6 +105,11 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     IPACM_Filter_cfg.xml
 
+# MotoActions
+PRODUCT_PACKAGES += \
+    MotoActions \
+    MotoCommonOverlay
+
 # Mountpoints
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
