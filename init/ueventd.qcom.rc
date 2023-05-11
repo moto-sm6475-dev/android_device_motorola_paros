@@ -542,3 +542,6 @@ subsystem mem_buf_vm
 
 # NFC ST Driver permissions
 /dev/st21nfc              0660   nfc        nfc
+
+# socinfo
+/sys/devices/soc0                                       serial_number                   0000    root    root
