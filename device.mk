@@ -48,6 +48,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Mountpoints
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
+    vendor_fsg_mountpoint \
+    vendor_super_fsg_mountpoint \
+    vendor_super_modem_mountpoint
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
