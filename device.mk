@@ -46,6 +46,15 @@ PRODUCT_PACKAGES += \
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/fstab.qcom),\
     $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/$(notdir $(f))))
 
+# Mountpoints
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
+    vendor_fsg_mountpoint \
+    vendor_super_fsg_mountpoint \
+    vendor_super_modem_mountpoint
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
