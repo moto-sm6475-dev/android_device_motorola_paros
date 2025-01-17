@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.multihal
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 34
 
