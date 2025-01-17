@@ -111,6 +111,13 @@ PRODUCT_PACKAGES += \
     vendor_super_fsg_mountpoint \
     vendor_super_modem_mountpoint
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.nxp \
+    com.android.nfc_extras \
+    nqnfcinfo \
+    Tag
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
