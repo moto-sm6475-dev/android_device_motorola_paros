@@ -96,6 +96,12 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    IPACM_Filter_cfg.xml
+
 # Mountpoints
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
