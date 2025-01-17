@@ -104,6 +104,12 @@ PRODUCT_PACKAGES += \
     fstab.qcom.vendor_ramdisk \
     init.recovery.qcom.rc
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    IPACM_Filter_cfg.xml
+
 # Mountpoints
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
