@@ -148,6 +148,10 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
