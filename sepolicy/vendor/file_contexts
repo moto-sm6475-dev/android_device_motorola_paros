@@ -1,5 +1,6 @@
 # Camera
 /data/vendor/misc/imager(/.*)?                          u:object_r:vendor_imager_data_file:s0
+/(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.imgtuner\.aidl-service        u:object_r:hal_imagetuner_default_exec:s0
 
 # Charger
 /data/vendor/chargeonly(/.*)?                           u:object_r:chargeonly_data_file:s0
