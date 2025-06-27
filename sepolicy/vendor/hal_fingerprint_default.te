@@ -1,0 +1,4 @@
+allow hal_fingerprint_default sysfs_dt_chosen:dir search;
+allow hal_fingerprint_default sysfs_dt_chosen:file { r_file_perms watch_reads };
+
+binder_call(hal_fingerprint_default, hal_health_default)
