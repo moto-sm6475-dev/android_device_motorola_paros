@@ -1,0 +1,6 @@
+# Camera
+vendor.camera.led.torchmode     u:object_r:vendor_camera_prop:s0
+
+# Secure Element
+persist.vendor.se.reset                        u:object_r:vendor_secure_element_prop:s0
+vendor.ese.                                    u:object_r:vendor_secure_element_prop:s0

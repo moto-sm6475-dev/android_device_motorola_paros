@@ -1,0 +1,2 @@
+allow hal_camera vendor_imager_data_file:dir rw_dir_perms;
+allow hal_camera vendor_imager_data_file:file rw_file_perms;

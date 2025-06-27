@@ -1,0 +1,28 @@
+# Camera
+/data/vendor/misc/imager(/.*)?                          u:object_r:vendor_imager_data_file:s0
+
+# Charger
+/data/vendor/chargeonly(/.*)?                           u:object_r:chargeonly_data_file:s0
+/(mnt/vendor/persist|persist)/chargeonly(/.*)?          u:object_r:persist_chargeonly_file:s0
+/(vendor|system/vendor)/bin/charge_only_mode            u:object_r:charge_only_exec:s0
+
+# Devicetree
+/sys/firmware/devicetree/base/chosen(/.*)?              u:object_r:sysfs_dt_chosen:s0
+
+# Modem
+/(mnt/vendor/persist|persist)/mdm(/.*)?                 u:object_r:persist_modem_file:s0
+
+# Powershare
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.paros      u:object_r:hal_lineage_powershare_default_exec:s0
+
+# Secure Element
+/dev/st54spi                                                                             u:object_r:secure_element_device:s0
+
+# Thermal
+/sys/devices/platform/soc/[a-f0-9]+\.qcom,spmi/spmi-[0-3]+/0-[0-4]+/[a-f0-9]+\.qcom,spmi:qcom,pm8350b@[0-9]+:qcom,amoled-ecm@[a-f0-9]+/hwmon/hwmon[0-9]+/name                u:object_r:sysfs_thermal:s0
+
+# Wakeups
+/sys/devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+
+# Widevine
+/vendor/bin/copy_wvcert\.sh u:object_r:widevinelicense_copy_exec:s0
