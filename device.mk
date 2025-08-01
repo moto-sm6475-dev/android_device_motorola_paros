@@ -7,6 +7,12 @@
 BOARD_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom.vendor_ramdisk \
+    init.recovery.qcom.rc
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
