@@ -27,6 +27,10 @@ PRODUCT_PACKAGES += \
 BOARD_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
