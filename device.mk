@@ -10,6 +10,10 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Init
 # Copy fstab.qcom to the vendor ramdisk first stage directory
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/fstab.qcom),\
