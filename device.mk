@@ -3,6 +3,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# API levels
+BOARD_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 34
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
