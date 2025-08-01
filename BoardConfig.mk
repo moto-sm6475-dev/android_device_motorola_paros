@@ -20,5 +20,12 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := paros
+TARGET_NO_BOOTLOADER := true
+
+# Platform
+TARGET_BOARD_PLATFORM := parrot
+
 # Inherit the proprietary files
 include vendor/motorola/paros/BoardConfigVendor.mk
