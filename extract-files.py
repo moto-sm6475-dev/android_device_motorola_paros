@@ -27,6 +27,7 @@ namespace_imports = [
     'device/motorola/paros',
     'hardware/qcom-caf/sm8450',
     'hardware/qcom-caf/wlan',
+    'hardware/motorola',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/dataservices',
