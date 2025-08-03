@@ -111,6 +111,19 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.default \
+    fstab.default.vendor_ramdisk \
+    init.mmi.touch.sh \
+    init.oem.hw.sh \
+    init.mmi.charge_only.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.qcom.rc \
+    init.target.rc \
+    ueventd.rc
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
