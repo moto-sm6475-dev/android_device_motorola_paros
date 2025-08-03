@@ -1,0 +1,22 @@
+# Audio
+audio.sys.mute.latency.factor=2
+audio.sys.routing.latency=0
+media.stagefright.audio.deep=false
+
+# E-sim
+esim.enable_esim_system_ui_by_default=true
+masterclear.allow_retain_esim_profiles_after_fdr=true
+ro.telephony.esim_slot_id=1
+
+# Google
+ro.opa.device_model_id=motorola-paros
+ro.opa.eligible_device=true
+
+# Motorola
+ro.mot.build.customerid=global
+ro.vendor.product.display=motorola g75
+
+# Radio
+persist.vendor.radio.force_gba_over_isim_app=1
+persist.vendor.radio.jbims=1
+ro.vendor.radio.imei.sv=15
