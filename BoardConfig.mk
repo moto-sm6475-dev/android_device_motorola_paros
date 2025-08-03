@@ -35,6 +35,11 @@ TARGET_BOOTLOADER_BOARD_NAME := parrot
 # Display
 TARGET_SCREEN_DENSITY := 400
 
+# DTB
+BOARD_USES_DT := true
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtbs
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
+
 # Kernel (Boot)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
@@ -58,6 +63,28 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.selinux=permissive \
     firmware_class.path=/vendor/firmware_mnt/image \
     printk.devkmsg=on
+
+# Kernel (prebuilt)
+TARGET_NO_KERNEL_OVERRIDE := true
+
+TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/kernel-headers
+TARGET_KERNEL_VERSION := 5.10
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)-kernel/kernel:kernel
+
+# Kernel modules
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/vendor_ramdisk/modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(DEVICE_PATH)-kernel/vendor_ramdisk/, $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)-kernel/vendor_ramdisk/modules.blocklist
+
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/vendor_ramdisk/modules.load.recovery))
+RECOVERY_MODULES := $(addprefix $(DEVICE_PATH)-kernel/vendor_ramdisk/, $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES) $(RECOVERY_MODULES))
+
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)-kernel/vendor_dlkm/modules.load))
+BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(DEVICE_PATH)-kernel/vendor_dlkm/, $(BOARD_VENDOR_KERNEL_MODULES_LOAD))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE :=  $(DEVICE_PATH)-kernel/vendor_dlkm/modules.blocklist
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
