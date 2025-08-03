@@ -40,6 +40,9 @@ BOARD_USES_DT := true
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtbs
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # Kernel (Boot)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
