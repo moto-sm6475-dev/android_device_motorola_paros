@@ -40,6 +40,9 @@ TARGET_BOOTLOADER_BOARD_NAME := parrot
 # Display
 TARGET_SCREEN_DENSITY := 400
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # Kernel (Boot)
 BOARD_BOOT_HEADER_VERSION := 4
 
