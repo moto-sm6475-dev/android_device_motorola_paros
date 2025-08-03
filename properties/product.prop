@@ -1,0 +1,6 @@
+# Audio
+audio.record.delay=50
+audio.deep_buffer.media=true
+
+# Motorola
+ro.vendor.product.display=motorola g75
