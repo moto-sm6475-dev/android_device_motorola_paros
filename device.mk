@@ -25,6 +25,27 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.service \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.r_submix.default \
+    audio.usb.default \
+    audioadsprpcd \
+    libbatterylistener \
+    libfmpal \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libvolumelistener
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default
+
 # Board API level
 BOARD_SHIPPING_API_LEVEL := 31
 
@@ -42,6 +63,15 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    init.qti.display_boot.rc \
+    init.qti.display_boot.sh \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.demura-service
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -88,6 +118,15 @@ PRODUCT_PACKAGES_DEBUG += \
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    hostapd \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/paros/paros-vendor.mk)
