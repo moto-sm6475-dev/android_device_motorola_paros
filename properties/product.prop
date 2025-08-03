@@ -1,0 +1,13 @@
+# Audio
+audio.sys.mute.latency.factor=2
+audio.sys.routing.latency=0
+
+# Google
+ro.opa.device_model_id=motorola-paros
+ro.opa.eligible_device=true
+
+# Media
+media.stagefright.audio.deep=false
+
+# Motorola
+ro.vendor.product.display=motorola g75
