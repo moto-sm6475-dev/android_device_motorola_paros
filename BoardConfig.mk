@@ -66,6 +66,32 @@ BOARD_KERNEL_CMDLINE := \
     firmware_class.path=/vendor/firmware_mnt/image \
     printk.devkmsg=on
 
+# Kernel (prebuilt)
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
+
+BOARD_KERNEL_BINARIES := kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+
+TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/kernel-headers
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)-kernel/dtb.img:$(TARGET_COPY_OUT)/dtb.img \
+    $(DEVICE_PATH)-kernel/kernel:kernel
+
+# Kernel modules
+DLKM_MODULES_PATH := $(DEVICE_PATH)-kernel/vendor_dlkm
+RAMDISK_MODULES_PATH := $(DEVICE_PATH)-kernel/vendor_boot
+
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DLKM_MODULES_PATH)/modules.blocklist
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
