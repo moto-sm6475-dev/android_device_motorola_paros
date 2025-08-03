@@ -1,0 +1,73 @@
+# Audio
+audio.offload.disable=false
+media.aac_51_output_enabled=true
+
+# Bluetooth
+persist.vendor.btstack.aac_frm_ctl.enabled=true
+
+# Charger
+ro.charger.enable_suspend=1
+
+# Display
+debug.sf.enable_hwc_vds=0
+
+# CNE
+persist.vendor.cne.feature=1
+
+# Data
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.dev_name=rmnet_usb0
+persist.data.df.dl_mode=5
+persist.data.df.iwlan_mux=9
+persist.data.df.mux_count=8
+persist.data.df.ul_mode=5
+
+# Disable MTE Async for system server
+arm64.memtag.process.system_server=off
+
+# Google
+ro.opa.device_model_id=motorola-paros
+ro.opa.eligible_device=true
+
+# HWUI
+debug.hwui.skia_atrace_enabled=false
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+ro.qcom.ims.use_moto_vt_ext=true
+
+# Media
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+
+# Netmgrd
+persist.vendor.data.mode=concurrent
+ro.vendor.use_data_netmgrd=true
+
+# NFC
+persist.nfc_cfg.config_file_name=libnfc-nci_PN560.conf
+
+# Radio
+DEVICE_PROVISIONED=1
+ril.subscription.types=NV,RUIM
+ro.telephony.default_network=33,33
+telephony.lteOnCdmaDevice=1
+
+# RTT
+config.disable_rtt=true
+
+# Vendor
+ro.vendor.qti.va_aosp.support=1
+
+# WFD
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
