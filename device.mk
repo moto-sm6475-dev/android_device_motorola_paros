@@ -158,9 +158,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworksResCommon \
+    FrameworksResParos \
     FrameworksResTarget \
     SettingsResCommon \
     SystemUIResCommon \
+    SystemUIResParos \
     TelephonyResCommon \
     WifiResTarget
 
