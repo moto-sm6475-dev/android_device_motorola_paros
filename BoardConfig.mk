@@ -41,7 +41,9 @@ TARGET_BOOTLOADER_BOARD_NAME := parrot
 TARGET_SCREEN_DENSITY := 400
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := \
+    $(DEVICE_PATH)/config.fs \
+    $(DEVICE_PATH)/mot_aids.fs
 
 # Kernel (Boot)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
