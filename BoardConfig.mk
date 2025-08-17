@@ -41,7 +41,9 @@ BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtbs
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := \
+    $(DEVICE_PATH)/config.fs \
+    $(DEVICE_PATH)/mot_aids.fs
 
 # Kernel (Boot)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
